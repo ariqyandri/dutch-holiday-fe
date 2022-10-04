@@ -9,6 +9,7 @@ import { PackageComponent } from './package/package.component';
 import { HomeComponent } from './home/home.component';
 import { PackageItemComponent } from './package-item/package-item.component';
 import { FilterComponent } from './filter/filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilterComponent } from './filter/filter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

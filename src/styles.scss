@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 $maxwidth: 1200px;
 
@@ -15,23 +16,27 @@ app-root {
   flex: 1 0;
 }
 
-h3{
-    font-size: 1.4rem;
-    font-weight: 300;
+h3 {
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .wrap {
   height: 100%;
-    width: 90vw;
-    max-width: $maxwidth;
-    margin: 0 auto;
+  width: 90vw;
+  max-width: $maxwidth;
+  margin: 0 auto;
+}
+
+.package-filter-wrapper {
+width: 90vw;
+max-width: $maxwidth;
 }
 
 .home {
   min-height: 100%;
 }
 
-
-.thin{
-    font-weight: 200;
+.thin {
+  font-weight: 200;
 }

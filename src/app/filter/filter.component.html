@@ -1,1 +1,53 @@
-<p>filter works!</p>
+<div class="package-filter-wrapper">
+  <form #f="ngForm" (ngSubmit)="submit(f.value)" class="package-filter row g-4">
+    <div class="form-group col-md">
+      <div class="">
+        <label for="depart">Departure</label>
+        <select
+          required
+          ngModel
+          name="depart"
+          #country="ngModel"
+          id="depart"
+          class="form-select"
+        >
+          <option value="">Airport</option>
+          <option *ngFor="let option of options" [value]="option.id">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-md">
+      <div class="">
+        <label for="country">Where are you going?</label>
+        <select
+          required
+          ngModel
+          name="country"
+          #country="ngModel"
+          id="country"
+          class="form-select"
+        >
+          <option value=""><i class="bi bi-geo-alt-fill"></i> Country</option>
+          <option *ngFor="let option of options" [value]="option.id">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="checkbox">
+        <label id="guarantee">
+          <input ngModel id="guarantee" name="guarantee" type="checkbox" />
+          30 Dat Guarantee
+        </label>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <br />
+      <button class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+    </div>
+  </form>
+</div>

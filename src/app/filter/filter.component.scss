@@ -1,0 +1,28 @@
+.package-filter-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 0 0;
+  box-sizing: border-box;
+}
+.package-filter {
+  box-sizing: border-box;
+  background-color: azure;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: auto;
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.33);
+  .col-md {
+    margin: auto;
+  }
+}
+
+select.ng-touched.ng-invalid{
+    border: 2px solid rgb(247, 101, 85);
+}
+
+label{
+    padding-bottom: 0.5rem;
+    font-weight: 300;
+}
