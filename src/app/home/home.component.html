@@ -17,8 +17,8 @@
       </div>
       <div class="container">
         <div class="row">
-          <div *ngFor="let i of packages | slice: 0:3" class="col">
-            <package-item [package]="i"></package-item>
+          <div *ngFor="let package of packages | slice: 0:3" class="col">
+            <package-item [package]="package"></package-item>
           </div>
         </div>
       </div>

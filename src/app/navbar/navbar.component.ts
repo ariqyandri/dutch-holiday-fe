@@ -14,18 +14,8 @@ export class NavbarComponent implements OnInit {
   params!: any;
   query!: any;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(this.router.events);
-
-    let observables = {
-      params: this.route.paramMap,
-      query: this.route.queryParamMap,
-    };
-    this.router.events.subscribe((e) => {
-      
-    });
-    combineLatest(observables).subscribe((combined) => {});
   }
 }

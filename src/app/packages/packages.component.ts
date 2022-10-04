@@ -14,21 +14,25 @@ export class PackagesComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: PackageService) {}
 
   ngOnInit(): void {
-    this.packages = this.service.getAll();
-
     let observables = {
       params: this.route.paramMap,
       query: this.route.queryParamMap,
     };
 
     combineLatest(observables).subscribe((combined) => {
-      console.log(this.route.snapshot.queryParamMap.get('depart'));
-      console.log(
-        this.service.getFiltered({
+
+      // I could also use combined['query'].get('depart') which is the ideal situation
+      if (
+        this.route.snapshot.queryParamMap.get('depart') &&
+        this.route.snapshot.queryParamMap.get('country')
+      ) {
+        this.packages = this.service.getFiltered({
           depart: this.route.snapshot.queryParamMap.get('depart'),
           country: this.route.snapshot.queryParamMap.get('country'),
-        })
-      );
+        });
+      } else {
+        this.packages = this.service.getAll();
+      }
     });
   }
 }

@@ -13,11 +13,6 @@ export class PackageComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: PackageService) {}
 
   ngOnInit(): void {
-    let observables = {
-      params: this.route.paramMap,
-      query: this.route.queryParamMap,
-    };
-    console.log(this.route.snapshot.paramMap.get('id'));
 
     // Iterates EVERYTIME route changes
     this.route.paramMap.subscribe((params) => {
