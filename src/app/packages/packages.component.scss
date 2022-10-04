@@ -1,0 +1,15 @@
+.wrap{
+    display: flex;
+}
+.filter-wrapper{
+    min-height: 20vh;
+    background-color: gainsboro;
+    flex: 0 0 20%;
+    width: 20%;
+}
+
+.packages-wrapper{
+    min-height: 20vh;
+    background-color: aquamarine;
+    flex: 1 0;
+}

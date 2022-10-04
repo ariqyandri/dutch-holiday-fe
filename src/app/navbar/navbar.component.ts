@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, RoutesRecognized } from '@angular/router';
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'navbar',
@@ -9,7 +11,21 @@ export class NavbarComponent implements OnInit {
   @Input('title')
   title!: string;
 
-  constructor() {}
+  params!: any;
+  query!: any;
 
-  ngOnInit(): void {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
+
+  ngOnInit(): void {
+    console.log(this.router.events);
+
+    let observables = {
+      params: this.route.paramMap,
+      query: this.route.queryParamMap,
+    };
+    this.router.events.subscribe((e) => {
+      
+    });
+    combineLatest(observables).subscribe((combined) => {});
+  }
 }
