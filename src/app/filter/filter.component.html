@@ -11,8 +11,8 @@
         class="form-select"
       >
         <option value="">Airport</option>
-        <option *ngFor="let option of options" [value]="option.id">
-          {{ option.name }}
+        <option *ngFor="let airport of airports" [value]="airport.id">
+          {{ airport.name }}
         </option>
       </select>
     </div>
@@ -29,23 +29,35 @@
         class="form-select"
       >
         <option value=""><i class="bi bi-geo-alt-fill"></i> Country</option>
-        <option *ngFor="let option of options" [value]="option.id">
-          {{ option.name }}
+        <option *ngFor="let country of countries" [value]="country.id">
+          {{ country.name }}
         </option>
       </select>
     </div>
   </div>
-  <div class="col-md">
-    <div class="checkbox">
-      <label id="guarantee">
-        <input ngModel id="guarantee" name="guarantee" type="checkbox" />
-        30 Dat Guarantee
-      </label>
-    </div>
+  <!-- <div class="col-md">
+    <label for="customRange3" class="form-label">Price Range</label>
+    <input
+      type="range"
+      class="form-range"
+      min="0"
+      max="5"
+      step="0.5"
+      id="customRange3"
+    />
   </div>
 
-  <div class="col-md">
-    <br />
-    <button class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+  <div class="col-md period">
+    <div>
+      <label for="from" class="form-label">From</label>
+      <input type="date" id="from" class="form-select" />
+    </div>
+    <div>
+      <label for="to" class="form-label">To</label>
+      <input type="date" id="to" class="form-select" />
+    </div>
+  </div> -->
+  <div class="col-md button">
+    <button class="btn btn-success" [disabled]="!f.valid">Submit</button>
   </div>
 </form>

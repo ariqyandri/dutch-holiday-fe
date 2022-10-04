@@ -1,12 +1,12 @@
 export var packages = [
   {
-    id: (1000 * Math.random()).toString().split('.')[0],
+    id: 1,
     depart: [
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Schipol' },
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Heathrow' },
+      { id: 2, name: 'Schipol' },
+      { id: 3, name: 'Heathrow' },
     ],
     country: {
-      id: (1000 * Math.random()).toString().split('.')[0],
+      id: 7,
       name: 'Italy',
     },
     region: 'Palermo',
@@ -17,16 +17,14 @@ export var packages = [
     ],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum eros bibendum odio lacinia, sed rhoncus mauris congue. Donec in sapien non justo tempus hendrerit. Pellentesque sit amet sollicitudin orci, sed vulputate magna. Praesent aliquam lectus nisl, in scelerisque augue dapibus a.',
-    usp: [],
+    usps: [1, 2, 3, 4],
     unavailable: [],
   },
   {
-    id: (1000 * Math.random()).toString().split('.')[0],
-    depart: [
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Heathrow' },
-    ],
+    id: 5,
+    depart: [{ id: 3, name: 'Heathrow' }],
     country: {
-      id: (1000 * Math.random()).toString().split('.')[0],
+      id: 7,
       name: 'Italy',
     },
     region: 'Roma',
@@ -38,17 +36,17 @@ export var packages = [
     ],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum eros bibendum odio lacinia, sed rhoncus mauris congue. Donec in sapien non justo tempus hendrerit. Pellentesque sit amet sollicitudin orci, sed vulputate magna. Praesent aliquam lectus nisl, in scelerisque augue dapibus a.',
-    usp: [],
+    usps: [1, 2, 3, 4],
     unavailable: [],
   },
   {
-    id: (1000 * Math.random()).toString().split('.')[0],
+    id: 8,
     depart: [
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Schipol' },
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Heathrow' },
+      { id: 2, name: 'Schipol' },
+      { id: 3, name: 'Heathrow' },
     ],
     country: {
-      id: (1000 * Math.random()).toString().split('.')[0],
+      id: 9,
       name: 'Spain',
     },
     region: 'Barcelona',
@@ -59,17 +57,17 @@ export var packages = [
     ],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum eros bibendum odio lacinia, sed rhoncus mauris congue. Donec in sapien non justo tempus hendrerit. Pellentesque sit amet sollicitudin orci, sed vulputate magna. Praesent aliquam lectus nisl, in scelerisque augue dapibus a.',
-    usp: [],
+    usps: [1, 2, 3, 4],
     unavailable: [],
   },
   {
-    id: (1000 * Math.random()).toString().split('.')[0],
+    id: 10,
     depart: [
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Schipol' },
-      { id: (1000 * Math.random()).toString().split('.')[0], name: 'Heathrow' },
+      { id: 2, name: 'Schipol' },
+      { id: 3, name: 'Heathrow' },
     ],
     country: {
-      id: (1000 * Math.random()).toString().split('.')[0],
+      id: 11,
       name: 'Belgium',
     },
     region: 'Antwerp',
@@ -80,7 +78,7 @@ export var packages = [
     ],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum eros bibendum odio lacinia, sed rhoncus mauris congue. Donec in sapien non justo tempus hendrerit. Pellentesque sit amet sollicitudin orci, sed vulputate magna. Praesent aliquam lectus nisl, in scelerisque augue dapibus a.',
-    usp: [],
+    usps: [1, 2, 3, 4],
     unavailable: [],
   },
 ];

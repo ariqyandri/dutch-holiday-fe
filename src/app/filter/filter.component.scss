@@ -1,4 +1,3 @@
-
 .package-filter {
   box-sizing: border-box;
   background-color: azure;
@@ -11,11 +10,40 @@
   }
 }
 
-select.ng-touched.ng-invalid{
-    border: 2px solid rgb(247, 101, 85);
+select.ng-touched.ng-invalid {
+  border: 2px solid rgb(247, 101, 85);
 }
 
-label{
-    padding-bottom: 0.5rem;
-    font-weight: 300;
+label {
+  padding-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.button {
+  flex: 0 0 20%;
+  margin: auto;
+
+  max-width: 20%;
+  button {
+    width: 100%;
+    height: 100%;
+  }
+}
+.period {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-success {
+  background-color: #ffd47f;
+  border: none;
+  color: rgb(62, 62, 62);
+  &:hover {
+    color: rgb(62, 62, 62);
+    background-color: darken($color: #ffd47f, $amount: 10%);
+  }
+  &:active {
+    color: rgb(62, 62, 62);
+    background-color: darken($color: #ffd47f, $amount: 20%);
+  }
 }

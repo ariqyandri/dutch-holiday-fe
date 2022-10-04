@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { combineLatest } from 'rxjs';
+import { PackageService } from '../package.service';
 
 @Component({
   selector: 'app-package',
@@ -6,8 +9,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./package.component.scss'],
 })
 export class PackageComponent implements OnInit {
+  package: any;
+  constructor(private route: ActivatedRoute, private service: PackageService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    let observables = {
+      params: this.route.paramMap,
+      query: this.route.queryParamMap,
+    };
+    console.log(this.route.snapshot.paramMap.get('id'));
 
-  ngOnInit(): void {}
+    // Iterates EVERYTIME route changes
+    this.route.paramMap.subscribe((params) => {
+      this.package = this.service.get(params.get('id'));
+    });
+  }
 }

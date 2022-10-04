@@ -21,6 +21,14 @@ export class PackagesComponent implements OnInit {
       query: this.route.queryParamMap,
     };
 
-    combineLatest(observables).subscribe((combined) => {});
+    combineLatest(observables).subscribe((combined) => {
+      console.log(this.route.snapshot.queryParamMap.get('depart'));
+      console.log(
+        this.service.getFiltered({
+          depart: this.route.snapshot.queryParamMap.get('depart'),
+          country: this.route.snapshot.queryParamMap.get('country'),
+        })
+      );
+    });
   }
 }

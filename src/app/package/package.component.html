@@ -1,5 +1,69 @@
 <div class="top">
-    <div class="package-filter-wrapper">
-      <package-filter></package-filter>
+  <div class="package-filter-wrapper">
+    <package-filter></package-filter>
+  </div>
+</div>
+<div class="wrap content">
+  <div class="intro">
+    <div class="text">
+      <div>
+        <a routerLink="/packages">back</a>
+        <h2>
+          {{ package.name }}
+        </h2>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+            />
+          </svg>
+          {{ package.region }}, {{ package.country.name }}
+        </p>
+        <p>{{ package.description }}</p>
+      </div>
+      <div class="info">
+        <h3>From € {{ package.price }} p/n</h3>
+        <button class="btn btn-success">Book now</button>
+      </div>
+    </div>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div *ngFor="let image of package.images" class="carousel-item active">
+          <img [src]="image" class="d-block w-100" alt="..." />
+        </div>
+      </div>
     </div>
   </div>
+  <div class="usp-wrapper">
+    <div class="">
+      <h2>What can you find?</h2>
+      <div class="container">
+        <div class="row">
+          <div *ngFor="let usp of package.usps" class="col">
+            <div class="card" >
+              <div class="card-body">
+                <h5 class="card-title">This is the {{ usp }} USP!</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a class="card-link">link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

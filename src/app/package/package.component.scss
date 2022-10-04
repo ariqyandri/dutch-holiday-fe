@@ -1,24 +1,86 @@
 .wrap {
+  display: flex;
+}
+.filter-wrapper {
+  min-height: 20vh;
+  background-color: azure;
+  flex: 0 0 22%;
+  width: 22%;
+}
+
+.packages-wrapper {
+  //   background-color: aquamarine;
+  flex: 1 0;
+}
+
+.top {
+  background-color: aquamarine;
+  position: relative;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  .carousel {
+    max-height: 50vh;
+  }
+}
+
+.intro {
+  display: flex;
+  .carousel {
+    max-width: 50%;
+  }
+}
+
+.text {
+  padding: 2rem;
+  padding-top: 1rem;
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .info {
     display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    h3 {
+      font-style: italic;
+      font-weight: 600;
+      margin: auto 0;
+    }
+    button {
+      font-style: italic;
+    }
   }
-  .filter-wrapper {
-    min-height: 20vh;
-    background-color: azure;
-    flex: 0 0 22%;
-    width: 22%;
+  a {
+    padding-bottom: 1rem;
+    display: block;
   }
-  
-  .packages-wrapper {
-    //   background-color: aquamarine;
-    flex: 1 0;
+}
+
+.usp-wrapper {
+  padding: 2rem;
+  h2{
+    padding-bottom: 1.5rem;
   }
-  
-  .top {
-    background-color: aquamarine;
-    position: relative;
-    min-height: 15vh;
-    display: flex;
-    justify-content: center;
-    padding-top: 5.5rem;
-    padding-bottom: 2rem;
+}
+
+.btn-success {
+  background-color: #ffd47f;
+  border: none;
+  color: rgb(62, 62, 62);
+  &:hover {
+    color: rgb(62, 62, 62);
+    background-color: darken($color: #ffd47f, $amount: 10%);
   }
+  &:active {
+    color: rgb(62, 62, 62);
+    background-color: darken($color: #ffd47f, $amount: 20%);
+  }
+}
