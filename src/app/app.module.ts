@@ -8,6 +8,7 @@ import { PackagesComponent } from './packages/packages.component';
 import { PackageComponent } from './package/package.component';
 import { HomeComponent } from './home/home.component';
 import { PackageItemComponent } from './package-item/package-item.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PackageItemComponent } from './package-item/package-item.component';
     PackageComponent,
     HomeComponent,
     PackageItemComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
