@@ -1,4 +1,4 @@
-$paddingForFilter: 7rem;
+$paddingForFilter: 6rem;
 
 .top {
   position: relative;
@@ -17,7 +17,7 @@ $paddingForFilter: 7rem;
 }
 
 .bottom {
-  padding-top: $paddingForFilter + 0.5rem;
+  padding-top: $paddingForFilter + 1rem;
   .text {
     padding-bottom: 1rem;
   }
