@@ -1,26 +1,27 @@
 <div>
-    <div class="top">
-        <div class="wrap">
-            <div class="text">
-                <h2 class="thin">Hello there</h2>
-                <h1>Let's find the best place for your travel!</h1>
-            </div>
-        </div>
-        <package-filter></package-filter>
+  <div class="top">
+    <div class="wrap">
+      <div class="text">
+        <h2 class="thin">Hello there</h2>
+        <h1>Let's find the best place for your travel!</h1>
+      </div>
     </div>
-    <div class="bottom">
-        <div class="wrap">
-            <div class="text">
-                <h3>Featured packages</h3>
-            </div>
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                  <div *ngFor="let i of [1,2,3,4]" class="col">
-                    <package-item></package-item>
-                  </div>
-                </div>
-              </div>
-        </div>
+    <div class="package-filter-wrapper">
+      <package-filter></package-filter>
     </div>
+  </div>
+  <div class="bottom">
+    <div class="wrap">
+      <div class="text">
+        <h3>Featured packages</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div *ngFor="let i of packages | slice: 0:3" class="col">
+            <package-item [package]="i"></package-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-

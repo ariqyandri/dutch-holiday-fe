@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { PackageService } from '../package.service';
 
 @Component({
   selector: 'home.home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  packages!: any;
 
-  constructor() { }
+  constructor(private service: PackageService) {}
 
   ngOnInit(): void {
+    this.packages = this.service.getAll();
   }
-
 }

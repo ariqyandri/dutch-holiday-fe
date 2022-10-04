@@ -1,15 +1,50 @@
-.wrap{
-    display: flex;
+.wrap {
+  display: flex;
 }
-.filter-wrapper{
-    min-height: 20vh;
-    background-color: gainsboro;
-    flex: 0 0 20%;
-    width: 20%;
+.filter-wrapper {
+  min-height: 20vh;
+  background-color: azure;
+  flex: 0 0 22%;
+  width: 22%;
 }
 
-.packages-wrapper{
-    min-height: 20vh;
-    background-color: aquamarine;
-    flex: 1 0;
+.packages-wrapper {
+  //   background-color: aquamarine;
+  flex: 1 0;
+}
+
+.top {
+  background-color: aquamarine;
+  position: relative;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+.package-filter-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  .col {
+    padding-bottom: 2rem;
+  }
+}
+
+.packages-wrapper {
+  padding: 2rem;
+  h3{
+    margin-bottom: 2rem;
+  }
+  .info{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.filter-wrapper {
+  padding: 2rem 1rem;
 }

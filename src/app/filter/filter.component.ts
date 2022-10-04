@@ -15,16 +15,17 @@ export class FilterComponent implements OnInit {
     { id: 3, name: 'Option 3' },
   ];
 
-  submit(f: any) {
-    console.log(f);
-  }
+  // submit(f: any) {
+  //   console.log(f);
+  // }
 
-  submit2() {
-    this.router.navigate(['/posts'], {
+  submit(f: any) {
+    this.router.navigate(['/packages'], {
       queryParams: { page: 1, order: 'newest' },
     });
   }
   ngOnInit(): void {
+    
   }
 
 }

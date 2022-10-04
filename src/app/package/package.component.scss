@@ -1,0 +1,24 @@
+.wrap {
+    display: flex;
+  }
+  .filter-wrapper {
+    min-height: 20vh;
+    background-color: azure;
+    flex: 0 0 22%;
+    width: 22%;
+  }
+  
+  .packages-wrapper {
+    //   background-color: aquamarine;
+    flex: 1 0;
+  }
+  
+  .top {
+    background-color: aquamarine;
+    position: relative;
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+  }

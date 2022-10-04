@@ -21,8 +21,13 @@ $maxwidth: 1200px;
   &:hover {
     color: rgb(62, 62, 62);
     background-color: darken($color: #ffd47f, $amount: 10%);
-  }&:active {
+  }
+  &:active {
     color: rgb(62, 62, 62);
     background-color: darken($color: #ffd47f, $amount: 20%);
   }
+}
+
+.bg-light {
+  background-color: transparent !important;
 }

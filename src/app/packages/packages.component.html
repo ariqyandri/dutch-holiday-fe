@@ -1,8 +1,22 @@
+<div class="top">
+  <div class="package-filter-wrapper">
+    <package-filter></package-filter>
+  </div>
+</div>
 <div class="wrap">
-    <div class="filter-wrapper">
-        LALALA
+  <div class="filter-wrapper">
+    <h3>Filters</h3>
+  </div>
+  <div class="packages-wrapper">
+    <div class="info">
+        <h3>All {{packages.length}} packages</h3>
     </div>
-    <div class="packages-wrapper">
-        Hahaha
+    <div class="container">
+      <div class="row row-cols-3">
+        <div *ngFor="let i of packages" class="col">
+          <package-item [package]="i"></package-item>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
