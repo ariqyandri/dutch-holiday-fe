@@ -11,4 +11,5 @@ $maxwidth: 1200px;
 .navbar > .container-fluid {
   width: 90vw;
   max-width: $maxwidth;
+  --bs-gutter-x: 0;
 }
