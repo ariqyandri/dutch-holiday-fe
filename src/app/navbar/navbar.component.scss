@@ -13,3 +13,16 @@ $maxwidth: 1200px;
   max-width: $maxwidth;
   --bs-gutter-x: 0;
 }
+
+.btn-success {
+  background-color: #ffd47f;
+  border: none;
+  color: rgb(62, 62, 62);
+  &:hover {
+    color: rgb(62, 62, 62);
+    background-color: darken($color: #ffd47f, $amount: 10%);
+  }&:active {
+    color: rgb(62, 62, 62);
+    background-color: darken($color: #ffd47f, $amount: 20%);
+  }
+}
