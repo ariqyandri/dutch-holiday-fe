@@ -10,9 +10,10 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1 0;
-  padding-bottom: 4rem;
 }
-
+body {
+  padding-bottom: 5rem;
+}
 app-root {
   flex: 1 0;
 }
@@ -30,8 +31,8 @@ h3 {
 }
 
 .package-filter-wrapper {
-width: 90vw;
-max-width: $maxwidth;
+  width: 90vw;
+  max-width: $maxwidth;
 }
 
 .home {
@@ -43,5 +44,5 @@ max-width: $maxwidth;
 }
 
 .navbar > .container-fluid {
-    max-width: $maxwidth;
-  }
+  max-width: $maxwidth;
+}
