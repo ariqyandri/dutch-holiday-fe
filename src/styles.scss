@@ -41,3 +41,6 @@ max-width: $maxwidth;
   font-weight: 200;
 }
 
+.navbar > .container-fluid {
+    max-width: $maxwidth;
+  }
