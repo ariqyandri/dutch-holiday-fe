@@ -1,2 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+$maxwidth: 1200px;
+
+html,
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+}
+
+app-root {
+  flex: 1 0;
+}
+
+.wrap {
+  height: 100%;
+    width: 90vw;
+    max-width: $maxwidth;
+    margin: 0 auto;
+}
+
+.home {
+  min-height: 100%;
+}
+
+
+.thin{
+    font-weight: 300;
+}

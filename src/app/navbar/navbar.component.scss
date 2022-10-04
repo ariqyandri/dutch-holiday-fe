@@ -1,7 +1,14 @@
+$maxwidth: 1200px;
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
     flex: 1;
     flex-direction: row;
     justify-content: center;
   }
+}
+
+.navbar > .container-fluid {
+  width: 90vw;
+  max-width: $maxwidth;
 }
