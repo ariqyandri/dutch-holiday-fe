@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { countries } from './countries';
-import { DataService } from './data.service';
+import { DataService } from '../data.service';
 
 @Injectable({
   providedIn: 'root',

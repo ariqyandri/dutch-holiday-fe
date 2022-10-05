@@ -1,8 +1,4 @@
-<form
-  #f="ngForm"
-  (ngSubmit)="submit(f.value)"
-  class="package-filter row g-4"
->
+<form #f="ngForm" (ngSubmit)="submit(f.value)" class="package-filter row g-4">
   <div class="col-md row g-4 inputs">
     <div class="form-group col-md">
       <label for="depart"><i class="bi bi-geo-alt-fill"></i> Departure</label>
@@ -56,8 +52,10 @@
 
     <div class="col-md">
       <div class="period">
-        <div>
-          <label for="from" class="form-label">From</label>
+        <div class="date">
+          <label for="from" class="form-label"
+            ><i class="bi bi-calendar"></i> Arrival</label
+          >
           <input
             required
             ngModel
@@ -65,26 +63,40 @@
             name="from"
             type="date"
             id="from"
-            class="form-select"
+            class="form-control"
             [min]="today"
-            [value]="today"
-            (ngModelChange)="modelChangeFn(from.value)"
+            (ngModelChange)="todayChange(from.value)"
           />
         </div>
         <div>
-          <label for="to" class="form-label">To</label>
+          <label for="duration" class="form-label"
+            ><i class="bi bi-clock"></i> Duration</label
+          >
           <input
-            required
             ngModel
-            #to="ngModel"
-            name="to"
-            type="date"
-            id="to"
-            class="form-select"
-            [min]="tomorrow"
-            (change)="onChange(to.value)"
+            #duration="ngModel"
+            name="duration"
+            type="number"
+            id="duration"
+            placeholder="Number of days"
+            class="form-control"
           />
         </div>
+        <!-- <div class="col-md">
+          <label for="period"><i class="bi bi-calendar"></i> Check in - Check out</label>
+          <input
+            ngModel
+            #period="ngModel"
+            id="period"
+            name="period"
+            type="text"
+            placeholder="Select your dates"
+            class="form-control"
+            bsDaterangepicker
+            [minDate]=""
+            [bsConfig]="{ adaptivePosition: true }"
+          />
+        </div> -->
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest } from 'rxjs';
-import { PackageService } from '../services/package.service';
+import { PackageService } from '../services/package/package.service';
 
 @Component({
   selector: 'app-packages',

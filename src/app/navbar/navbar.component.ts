@@ -1,7 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RoutesRecognized } from '@angular/router';
 import { combineLatest } from 'rxjs';
-import { PackageService } from '../services/package.service';
+import { PackageService } from '../services/package/package.service';
 
 @Component({
   selector: 'navbar',

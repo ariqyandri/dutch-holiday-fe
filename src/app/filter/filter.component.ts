@@ -1,9 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CountryService } from '../services/country.service';
-import { DepartureService } from '../services/departure.service';
-import { PeriodService } from '../services/period.service';
-
+import { CountryService } from '../services/filter/country.service';
+import { DepartureService } from '../services/filter/departure.service';
+import { PeriodService } from '../services/package/period.service';
 
 
 @Component({
@@ -22,13 +21,12 @@ export class FilterComponent implements OnInit {
 
   airports: any;
   countries: any;
-  today: string = '';
+  today:string = '';
   tomorrow: string = '';
 
   from: any;
 
   submit(f: any) {
-    console.log(f);
     this.router.navigate(['/packages'], {
       queryParams: f,
     });
@@ -36,7 +34,7 @@ export class FilterComponent implements OnInit {
 
   onChange(f: any) {}
 
-  modelChangeFn(from: any) {
+  todayChange(from: any) {
     let td = new Date(from);
     this.tomorrow = this.periodData.getTomorrow(td);
   }
@@ -45,7 +43,7 @@ export class FilterComponent implements OnInit {
     this.airports = this.airportsData.getAll();
     this.countries = this.countriesData.getAll();
     this.today = this.periodData.getToday();
-    this.tomorrow = this.periodData.getTomorrow();
+    // this.tomorrow = this.periodData.getTomorrow();
     this.from = this.tomorrow;
     // this.route.queryParamMap.subscribe((queryParam) => {
     //   if (queryParam.get('depart') || queryParam.get('country')) {

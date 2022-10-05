@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PeriodService } from '../services/period.service';
 
 @Component({
   selector: 'footer',

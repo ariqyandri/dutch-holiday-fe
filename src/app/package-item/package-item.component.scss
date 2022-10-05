@@ -6,10 +6,9 @@
     border-top: 3px solid aquamarine;
     .info {
       display: flex;
-
-      justify-content: space-between;
+      justify-content: flex-end;
     }
-    p {
+    h5,p {
       margin-bottom: 0;
     }
   }

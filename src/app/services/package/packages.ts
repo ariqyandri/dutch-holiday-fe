@@ -1,7 +1,3 @@
-import { airports } from "./airports";
-
-airports
-
 export var packages = [
   {
     id: 1,
@@ -16,6 +12,7 @@ export var packages = [
     region: 'Palermo',
     name: 'Sicilian Hotel',
     price: 100,
+    totalPrice: 100,
     images: [
       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     ],
@@ -35,6 +32,8 @@ export var packages = [
     name: 'Hotel Gladiator',
 
     price: 100,
+    totalPrice: 100,
+
     images: [
       'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     ],
@@ -56,6 +55,8 @@ export var packages = [
     region: 'Barcelona',
     name: 'Antonio Gaudi Hotel',
     price: 100,
+    totalPrice: 100,
+
     images: [
       'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80',
     ],
@@ -77,6 +78,8 @@ export var packages = [
     region: 'Antwerp',
     name: 'Royal Art Hotel',
     price: 100,
+    totalPrice: 100,
+
     images: [
       'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
     ],

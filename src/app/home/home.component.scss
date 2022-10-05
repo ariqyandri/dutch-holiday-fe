@@ -14,6 +14,14 @@ $paddingForFilter: 6rem;
     gap: 1rem;
     max-width: 550px;
   }
+  .package-filter-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 0 0;
+    box-sizing: border-box;
+  }
 }
 
 .bottom {
@@ -23,11 +31,3 @@ $paddingForFilter: 6rem;
   }
 }
 
-.package-filter-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  padding: 0 0;
-  box-sizing: border-box;
-}

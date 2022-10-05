@@ -1,8 +1,4 @@
-<div class="top">
-  <div class="package-filter-wrapper">
-    <package-filter></package-filter>
-  </div>
-</div>
+
 <div class="wrap">
   <div class="filter-wrapper">
     <h3>Filters</h3>
@@ -14,7 +10,7 @@
         <!-- Sort button should be here, as a select option with (onChange) -->
     </div>
     <div class="container">
-      <div class="row row-cols-3">
+      <div class="row row-cols-2">
         <div *ngFor="let i of packages" class="col">
           <package-item [package]="i"></package-item>
         </div>

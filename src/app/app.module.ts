@@ -14,7 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ScrollDirective } from './navbar/scroll.directive';
 import { ExtraFitlerComponent } from './extra-fitler/extra-fitler.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ScrollDirective,
     ExtraFitlerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, CarouselModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, CarouselModule,BrowserAnimationsModule,
+    BsDatepickerModule],
   providers: [],
   bootstrap: [AppComponent],
 })

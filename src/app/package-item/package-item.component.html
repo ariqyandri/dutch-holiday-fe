@@ -2,12 +2,13 @@
   <img [src]="package.images[0]" class="card-img-top" alt="..." />
   <div class="card-body">
     <h4 class="card-title">{{ package.name }}</h4>
-    <div class="info">
-      <p>
-        <i class="bi bi-geo-alt-fill"></i>
-        {{ package.region }}
-      </p>
-      <p class="end">From € {{ package.price }} p/n</p>
+    <p>
+      <i class="bi bi-geo-alt-fill"></i>
+      {{ package.region }}
+    </p>
+    <div [ngSwitch]="page" class="info">
+      <p *ngSwitchCase="'home'" class="end">From € {{ package.price }} p/n</p>
+      <h5 *ngSwitchDefault>From € {{ package.totalPrice }}</h5>
     </div>
   </div>
 </a>
