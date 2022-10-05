@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollDirective } from './navbar/scroll.directive';
 import { ExtraFitlerComponent } from './extra-fitler/extra-fitler.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ExtraFitlerComponent } from './extra-fitler/extra-fitler.component';
     ScrollDirective,
     ExtraFitlerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, CarouselModule],
   providers: [],
   bootstrap: [AppComponent],
 })

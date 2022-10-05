@@ -22,17 +22,11 @@
         <button class="btn btn-success">Book now</button>
       </div>
     </div>
-    <div
-      id="carouselExampleSlidesOnly"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div *ngFor="let image of package.images" class="carousel-item active">
-          <img [src]="image" class="d-block w-100" alt="..." />
-        </div>
-      </div>
-    </div>
+    <carousel>
+      <slide *ngFor="let image of package.images" class="carousel-item active">
+        <img [src]="image" class="d-block w-100" alt="..." />
+      </slide>
+    </carousel>
   </div>
   <div class="usp-wrapper">
     <div class="">

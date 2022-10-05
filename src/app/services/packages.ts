@@ -1,3 +1,7 @@
+import { airports } from "./airports";
+
+airports
+
 export var packages = [
   {
     id: 1,
@@ -50,7 +54,7 @@ export var packages = [
       name: 'Spain',
     },
     region: 'Barcelona',
-    name: 'Antonia Gaudi Hotel',
+    name: 'Antonio Gaudi Hotel',
     price: 100,
     images: [
       'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80',
