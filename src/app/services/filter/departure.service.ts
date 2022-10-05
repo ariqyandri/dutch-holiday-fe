@@ -6,7 +6,6 @@ import { DataService } from '../data.service';
   providedIn: 'root',
 })
 export class DepartureService extends DataService {
-  airports: any;
   
   constructor() {
     super(airports);

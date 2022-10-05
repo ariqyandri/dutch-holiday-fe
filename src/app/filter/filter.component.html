@@ -64,8 +64,7 @@
             type="date"
             id="from"
             class="form-control"
-            [min]="today"
-            (ngModelChange)="todayChange(from.value)"
+            [min]="tomorrow"
           />
         </div>
         <div>
@@ -75,6 +74,7 @@
           <input
             ngModel
             #duration="ngModel"
+            [min]="1"
             name="duration"
             type="number"
             id="duration"
