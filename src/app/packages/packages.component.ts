@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest } from 'rxjs';
-import { PackageService } from '../package.service';
+import { PackageService } from '../services/package.service';
 
 @Component({
   selector: 'app-packages',
@@ -20,15 +20,13 @@ export class PackagesComponent implements OnInit {
     };
 
     combineLatest(observables).subscribe((combined) => {
-
+      let depart = combined['query'].get('depart');
+      let country = combined['query'].get('country');
       // I could also use combined['query'].get('depart') which is the ideal situation
-      if (
-        this.route.snapshot.queryParamMap.get('depart') &&
-        this.route.snapshot.queryParamMap.get('country')
-      ) {
+      if (depart && country) {
         this.packages = this.service.getFiltered({
-          depart: this.route.snapshot.queryParamMap.get('depart'),
-          country: this.route.snapshot.queryParamMap.get('country'),
+          depart: depart,
+          country: country,
         });
       } else {
         this.packages = this.service.getAll();

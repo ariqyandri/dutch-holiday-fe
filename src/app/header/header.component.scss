@@ -1,0 +1,15 @@
+.top {
+  position: relative;
+  background-color: aquamarine;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 7rem;
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 550px;
+  }
+}

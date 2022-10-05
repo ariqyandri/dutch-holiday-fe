@@ -6,11 +6,13 @@
   }
 }
 
-.navbar > .container-fluid {
-  width: 90vw;
-  --bs-gutter-x: 0;
+.navbar {
+    transition: 0.1s ease-in;
+  > .container-fluid {
+    width: 90vw;
+    --bs-gutter-x: 0;
+  }
 }
-
 .btn-success {
   background-color: #ffd47f;
   border: none;
@@ -25,7 +27,6 @@
   }
 }
 
-.bg-light {
-  background-color: #7feaff !important;
-  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.33);
+.navbar-brand {
+  font-weight: bold;
 }

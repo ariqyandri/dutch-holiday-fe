@@ -1,7 +1,11 @@
-<form #f="ngForm" (ngSubmit)="submit(f.value)" class="package-filter row g-4">
-  <div class="form-group col-md">
-    <div class="">
-      <label for="depart">Departure</label>
+<form
+  #f="ngForm"
+  (ngSubmit)="submit(f.value)"
+  class="package-filter row g-4"
+>
+  <div class="col-md row g-4 inputs">
+    <div class="form-group col-md">
+      <label for="depart"><i class="bi bi-geo-alt-fill"></i> Departure</label>
       <select
         required
         ngModel
@@ -9,17 +13,18 @@
         #country="ngModel"
         id="depart"
         class="form-select"
+        [value]="'2'"
       >
-        <option value="">Airport</option>
+        <option value="" class="thin">Choose an airport</option>
         <option *ngFor="let airport of airports" [value]="airport.id">
           {{ airport.name }}
         </option>
       </select>
     </div>
-  </div>
-  <div class="form-group col-md">
-    <div class="">
-      <label for="country">Where are you going?</label>
+    <div class="form-group col-md">
+      <label for="country"
+        ><i class="bi bi-geo-alt-fill"></i> Where are you going?</label
+      >
       <select
         required
         ngModel
@@ -28,38 +33,61 @@
         id="country"
         class="form-select"
       >
-        <option value=""><i class="bi bi-geo-alt-fill"></i> Country</option>
+        <option value="" class="thin">Choose a destination</option>
         <option *ngFor="let country of countries" [value]="country.id">
           {{ country.name }}
         </option>
       </select>
     </div>
-  </div>
 
-  <!-- These are the price range and date inputs, commented out to keep the webpage clean-->
+    <!-- These are the price range and date inputs, commented out to keep the webpage clean-->
 
-  <!-- <div class="col-md">
-    <label for="customRange3" class="form-label">Price Range</label>
-    <input
-      type="range"
-      class="form-range"
-      min="0"
-      max="5"
-      step="0.5"
-      id="customRange3"
-    />
-  </div>
+    <!-- <div class="col-md">
+      <label for="customRange3" class="form-label">Price Range</label>
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="5"
+        step="0.5"
+        id="customRange3"
+      />
+    </div> -->
 
-  <div class="col-md period">
-    <div>
-      <label for="from" class="form-label">From</label>
-      <input type="date" id="from" class="form-select" />
+    <div class="col-md">
+      <div class="period">
+        <div>
+          <label for="from" class="form-label">From</label>
+          <input
+            required
+            ngModel
+            #from="ngModel"
+            name="from"
+            type="date"
+            id="from"
+            class="form-select"
+            [min]="today"
+            [value]="today"
+            (ngModelChange)="modelChangeFn(from.value)"
+          />
+        </div>
+        <div>
+          <label for="to" class="form-label">To</label>
+          <input
+            required
+            ngModel
+            #to="ngModel"
+            name="to"
+            type="date"
+            id="to"
+            class="form-select"
+            [min]="tomorrow"
+            (change)="onChange(to.value)"
+          />
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="to" class="form-label">To</label>
-      <input type="date" id="to" class="form-select" />
-    </div>
-  </div> -->
+  </div>
   <div class="col-md button">
     <button class="btn btn-success" [disabled]="!f.valid">Submit</button>
   </div>

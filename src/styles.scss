@@ -11,9 +11,7 @@ body {
   flex-direction: column;
   flex: 1 0;
 }
-body {
-  padding-bottom: 5rem;
-}
+
 app-root {
   flex: 1 0;
 }
@@ -24,7 +22,7 @@ h3 {
 }
 
 .wrap {
-  height: 100%;
+//   height: 100%;
   width: 90vw;
   max-width: $maxwidth;
   margin: 0 auto;
@@ -46,3 +44,6 @@ h3 {
 .navbar > .container-fluid {
   max-width: $maxwidth;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

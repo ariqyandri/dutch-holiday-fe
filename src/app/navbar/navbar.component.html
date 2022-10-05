@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" appScroll >
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="">{{ title }}</a>
     <button
@@ -21,7 +21,12 @@
         </li>
       </ul>
 
-      <button class="btn btn-success">Impulsive Holiday!</button>
+      <button
+        [routerLink]="['/package', randomId]"
+        class="btn btn-success"
+      >
+        Impulsive Holiday!
+      </button>
     </div>
   </div>
 </nav>
