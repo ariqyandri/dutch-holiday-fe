@@ -9,6 +9,7 @@ import { PackageService } from '../services/package/package.service';
   styleUrls: ['./packages.component.scss'],
 })
 export class PackagesComponent implements OnInit {
+  
   packages: any;
 
   constructor(private route: ActivatedRoute, private service: PackageService) {}
@@ -22,6 +23,7 @@ export class PackagesComponent implements OnInit {
     combineLatest(observables).subscribe((combined) => {
       let depart = combined['query'].get('depart');
       let country = combined['query'].get('country');
+      let duration = combined['query'].get('duration');
       // I could also use combined['query'].get('depart') which is the ideal situation
       if (depart && country) {
         this.packages = this.service.getFiltered({

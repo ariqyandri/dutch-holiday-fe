@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PackageItemComponent implements OnInit {
   @Input('package') package: any;
   @Input('page') page?: any;
+  @Input('duration') duration?: any;
 
   constructor() {}
 
